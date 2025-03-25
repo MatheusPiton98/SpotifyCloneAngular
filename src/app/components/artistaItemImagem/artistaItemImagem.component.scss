@@ -1,0 +1,29 @@
+@import "variaveis.scss";
+
+.container {
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 0px;
+  border-radius: 10px;
+  // margin-top: 5px;
+
+  &:hover {
+    background-color: $cor-fundo2;
+  }
+
+  img {
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  span {
+    color: $branco-transparente-70;
+    flex-grow: 1;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,95 @@
+@import "variaveis.scss";
+
+.table {
+  width: 100%;
+  text-align: left;
+  table-layout: fixed;
+  border-collapse: collapse;
+  position: relative;
+  top: 0;
+
+  .play {
+    color: $cor-primaria;
+    font-size: 0.5rem;
+  }
+
+  .executando {
+    background-color: $cor-fundo2;
+    padding: 10px;
+    // border: solid #ccc 1px;
+    // -webkit-border-radius: 25px;
+    // -moz-border-radius: 25px;
+    // border-radius: 25px;
+
+    td {
+      color: $cor-primaria;
+    }
+  }
+
+  thead {
+    // position: fixed;
+    // top: ;
+
+    th {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: $branco-transparente-30;
+      position: sticky;
+      top: -1px;
+      background-color: $cor-fundo;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 15px;
+    }
+  }
+
+  th,
+  td {
+    padding-right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:nth-child(1) {
+      padding-left: 10px;
+    }
+  }
+
+  tr {
+    &:hover {
+      cursor: pointer;
+
+      td {
+        color: $cor-primaria;
+      }
+    }
+
+    td {
+      padding: 10px 20px 10px 0px;
+      margin-top: 10px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: $branco-transparente-70;
+
+      &:nth-child(1) {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .w {
+    @for $i from 1 to 10 {
+      $width: $i * 5;
+
+      &-#{ $width } {
+        width: #{$width * 1%};
+      }
+    }
+
+    width: 40%;
+  }
+
+  .direita {
+    text-align: right;
+  }
+}

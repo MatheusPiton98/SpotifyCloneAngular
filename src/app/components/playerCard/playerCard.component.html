@@ -1,0 +1,21 @@
+<div class="container card p-10">
+  <div
+    class="image"
+    [style.background-image]="'url(' + musica.album.imagemUrl + ')'"
+  ></div>
+  <div class="controles">
+    <span>{{ musica.titulo }}</span>
+    <br />
+    <span style="font-size: 0.7rem">{{ musica.album.nome }}</span>
+    <div class="botoes">
+      <!-- <fa-icon [icon]="randomIcone"></fa-icon> -->
+      <fa-icon [icon]="anteriorIcone" (click)="voltarMusica()"></fa-icon>
+      <fa-icon
+        [icon]="!verificaPausado ? pauseIcone : startIcone"
+        (click)="!verificaPausado ? pausarMusica() : startMusica()"
+      ></fa-icon>
+      <fa-icon [icon]="proximoIcone" (click)="proximaMusica()"></fa-icon>
+      <!-- <fa-icon [icon]="refreshIcone"></fa-icon> -->
+    </div>
+  </div>
+</div>

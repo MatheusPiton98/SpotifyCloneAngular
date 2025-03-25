@@ -1,0 +1,54 @@
+@import "table.scss";
+@import "variaveis.scss";
+
+:host {
+  display: flex;
+  justify-content: space-between;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+
+    &-thumb {
+      background-color: rgba($cor-primaria, 0.5);
+      border-radius: 10px;
+    }
+
+    &-track {
+      background: transparent;
+    }
+  }
+
+  .minhasMusicas {
+    padding: 0px 50px;
+    padding-bottom: 20px;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    .topArtista {
+      top: 0;
+      height: 35vh;
+      width: 100%;
+      // background-color: blue;
+      overflow-y: hidden;
+
+      .d-block {
+        display: block;
+      }
+    }
+
+    .musicasTable {
+      // background-color: red;
+      height: 65vh;
+      overflow: auto;
+    }
+  }
+
+  .painelDireito {
+    height: 100vh;
+  }
+}

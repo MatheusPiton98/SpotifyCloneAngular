@@ -1,0 +1,12 @@
+<div class="minhasMusicas">
+  <div class="topArtista" *ngFor="let artista of artistas">
+    <app-banner
+      class="mt-1"
+      [imagemUrl]="artista.imagemUrl"
+      [text]="artista.nome"
+      (click)="irParaMusicasArtista(artista.id)"
+    ></app-banner>
+  </div>
+</div>
+
+<app-painelDireito class="painelDireito"></app-painelDireito>
