@@ -1,4 +1,4 @@
-@import 'variaveis.scss';
+@import "variaveis.scss";
 
 div {
   padding: 5px 30px;
@@ -11,15 +11,16 @@ div {
 
   img {
     flex-grow: 0;
-    width: 40px;
-    height: auto;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    object-fit: cover;
   }
 
   span {
     flex-grow: 1;
     margin-left: 20px;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 700;
   }
 
